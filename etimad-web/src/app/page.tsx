@@ -1,69 +1,361 @@
-import Image from "next/image";
+const services = [
+  {
+    number: "01",
+    title: "Software Engineering",
+    description:
+      "Scalable web applications, business platforms, APIs and custom software built around your business needs.",
+  },
+  {
+    number: "02",
+    title: "AI & Automation",
+    description:
+      "Transform repetitive processes into intelligent, automated workflows that save time and improve efficiency.",
+  },
+  {
+    number: "03",
+    title: "Cloud & DevOps",
+    description:
+      "Modern cloud infrastructure, deployment pipelines, monitoring and application modernization.",
+  },
+  {
+    number: "04",
+    title: "Enterprise Technology",
+    description:
+      "Integration, modernization and technology solutions designed for growing and established businesses.",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main>
+      {/* Navigation */}
+      <header className="site-header">
+        <div className="container nav-container">
+          <a href="/" className="brand">
+            <span className="brand-name">ETIMAD</span>
+            <span className="brand-subtitle">SOLUTION PVT. LTD.</span>
+          </a>
+
+          <nav className="desktop-nav">
+            <a href="#services">Services</a>
+            <a href="#solutions">Solutions</a>
+            <a href="#industries">Industries</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </nav>
+
+          <a href="#contact" className="nav-cta">
+            Let&apos;s Talk <span>↗</span>
+          </a>
+        </div>
+      </header>
+
+      {/* Hero */}
+      <section className="hero">
+        <div className="hero-orbit hero-orbit-one" />
+        <div className="hero-orbit hero-orbit-two" />
+
+        <div className="container hero-container">
+          <div className="hero-content">
+            <div className="hero-location">
+              <span className="location-dot" />
+              INDIA <span>•</span> GCC <span>•</span> GLOBAL
+            </div>
+
+            <h1>
+              Build.
+              <br />
+              <span>Secure.</span>
+              <br />
+              Scale.
+            </h1>
+
+            <p className="hero-description">
+              We build intelligent technology solutions that help ambitious
+              businesses modernize, automate and grow with confidence.
+            </p>
+
+            <div className="hero-actions">
+              <a href="#contact" className="primary-button">
+                Talk to an Expert
+                <span>↗</span>
+              </a>
+
+              <a href="#services" className="secondary-button">
+                Explore Services
+                <span>↓</span>
+              </a>
+            </div>
+
+            <div className="hero-proof">
+              <div>
+                <strong>INDIA</strong>
+                <span>Engineering & Delivery</span>
+              </div>
+
+              <div className="proof-divider" />
+
+              <div>
+                <strong>GCC</strong>
+                <span>Technology Partnership</span>
+              </div>
+
+              <div className="proof-divider" />
+
+              <div>
+                <strong>GLOBAL</strong>
+                <span>Future Ready</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="hero-visual">
+            <div className="visual-glow" />
+
+            <div className="visual-frame">
+              <img
+                src="/etimad-brand-visual.png"
+                alt="Etimad technology solutions across India, GCC and global markets"
+              />
+            </div>
+
+            <div className="visual-caption">
+              <span className="caption-line" />
+              <span>Technology • Trust • Transformation</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="hero-scroll">
+          <span>SCROLL TO EXPLORE</span>
+          <span className="scroll-line" />
+        </div>
+      </section>
+
+      {/* Introduction */}
+      <section className="intro-section" id="about">
+        <div className="container intro-grid">
+          <div>
+            <p className="section-label">WHO WE ARE</p>
+            <h2>
+              Technology built around
+              <span> your business.</span>
+            </h2>
+          </div>
+
+          <div className="intro-copy">
+            <p>
+              Etimad Solution Pvt. Ltd. is a technology company helping
+              businesses turn ideas, operational challenges and growth
+              opportunities into reliable digital solutions.
+            </p>
+
+            <p>
+              From India to the GCC, we combine engineering expertise,
+              automation and modern technology to create solutions designed
+              for long-term growth.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="services-section" id="services">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <p className="section-label">WHAT WE DO</p>
+              <h2>
+                Technology that
+                <span> delivers.</span>
+              </h2>
+            </div>
+
+            <p>
+              From custom software to intelligent automation, we help
+              organizations modernize and grow.
+            </p>
+          </div>
+
+          <div className="services-grid">
+            {services.map((service) => (
+              <article className="service-card" key={service.number}>
+                <span className="service-number">{service.number}</span>
+
+                <h3>{service.title}</h3>
+
+                <p>{service.description}</p>
+
+                <a href="#contact" className="service-link">
+                  Discover <span>↗</span>
+                </a>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+            {/* Why Etimad */}
+      <section className="why-section" id="why-etimad">
+        <div className="container">
+          <div className="why-header">
+            <div>
+              <p className="section-label">WHY ETIMAD</p>
+
+              <h2>
+                Technology is only
+                <br />
+                valuable when it <span>works.</span>
+              </h2>
+            </div>
+
+            <p>
+              We combine engineering discipline, business understanding and
+              modern technology to create solutions that deliver practical,
+              long-term value.
+            </p>
+          </div>
+
+          <div className="why-grid">
+            <article className="why-card why-card-featured">
+              <span className="why-number">01</span>
+
+              <div className="why-card-content">
+                <div className="why-icon">⌁</div>
+
+                <h3>Engineering First</h3>
+
+                <p>
+                  We approach business challenges through solid engineering,
+                  thoughtful architecture and technology that is built to last.
+                </p>
+              </div>
+            </article>
+
+            <article className="why-card">
+              <span className="why-number">02</span>
+
+              <div className="why-card-content">
+                <div className="why-icon">↗</div>
+
+                <h3>Built to Scale</h3>
+
+                <p>
+                  We design solutions with the future in mind, allowing your
+                  technology to evolve as your business grows.
+                </p>
+              </div>
+            </article>
+
+            <article className="why-card">
+              <span className="why-number">03</span>
+
+              <div className="why-card-content">
+                <div className="why-icon">◎</div>
+
+                <h3>India + GCC</h3>
+
+                <p>
+                  Engineering capabilities from India combined with a strong
+                  focus on businesses across the GCC.
+                </p>
+              </div>
+            </article>
+
+            <article className="why-card">
+              <span className="why-number">04</span>
+
+              <div className="why-card-content">
+                <div className="why-icon">◇</div>
+
+                <h3>Long-Term Partnership</h3>
+
+                <p>
+                  We aim to become an extension of your team — supporting,
+                  improving and evolving your technology over time.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* India + GCC */}
+      <section className="global-section" id="solutions">
+        <div className="container global-grid">
+          <div>
+            <p className="section-label">WHERE WE OPERATE</p>
+
+            <h2>
+              From India.
+              <br />
+              <span>For the world.</span>
+            </h2>
+          </div>
+
+          <div className="global-content">
+            <p>
+              Etimad is being built with a global outlook — combining
+              engineering capabilities from India with a strong focus on
+              businesses across the GCC.
+            </p>
+
+            <div className="regions">
+              <div>
+                <strong>🇮🇳 India</strong>
+                <span>Engineering & Delivery</span>
+              </div>
+
+              <div>
+                <strong>🇦🇪 GCC</strong>
+                <span>Business & Technology</span>
+              </div>
+
+              <div>
+                <strong>🌍 Global</strong>
+                <span>Future Expansion</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="cta-section" id="contact">
+        <div className="container cta-content">
+          <p className="section-label">START A CONVERSATION</p>
+
+          <h2>
+            Have a challenge?
+            <br />
+            <span>Let&apos;s build the solution.</span>
+          </h2>
+
+          <p>
+            Tell us what you're trying to achieve. We'll explore how
+            technology can help.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+
+          <a href="mailto:hello@etimadsolution.com" className="primary-button">
+            Talk to Etimad <span>↗</span>
           </a>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="site-footer">
+        <div className="container footer-content">
+          <div>
+            <div className="brand-name footer-brand">ETIMAD</div>
+            <p>Technology. Trust. Transformation.</p>
+          </div>
+
+          <div className="footer-right">
+            <p>Etimad Solution Pvt. Ltd.</p>
+            <p>India • GCC • Global</p>
+          </div>
+        </div>
+      </footer>
+    </main>
   );
 }
