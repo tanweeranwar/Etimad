@@ -812,51 +812,390 @@ a {
 }
 
 /* =========================
+   INDUSTRIES
+========================= */
+
+.industries-section {
+  padding: 145px 0;
+
+  background: var(--background);
+
+  border-top: 1px solid var(--border);
+}
+
+.industries-header {
+  display: grid;
+
+  grid-template-columns: 1fr 0.72fr;
+
+  gap: 100px;
+
+  align-items: end;
+
+  margin-bottom: 70px;
+}
+
+.industries-header h2 {
+  margin: 0;
+
+  font-size: clamp(42px, 5vw, 68px);
+
+  line-height: 1;
+
+  letter-spacing: -0.045em;
+}
+
+.industries-header h2 span {
+  color: var(--blue-bright);
+}
+
+.industries-header > p {
+  max-width: 430px;
+
+  margin: 0;
+
+  color: var(--text-muted);
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+/* Industry list */
+
+.industries-list {
+  border-top: 1px solid var(--border);
+}
+
+.industry-item {
+  display: grid;
+
+  grid-template-columns: 80px 1fr 60px;
+
+  align-items: center;
+
+  gap: 30px;
+
+  min-height: 145px;
+
+  padding: 25px 20px;
+
+  border-bottom: 1px solid var(--border);
+
+  transition:
+    background 0.3s ease,
+    padding 0.3s ease;
+}
+
+.industry-item:hover {
+  padding-left: 30px;
+  padding-right: 30px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(22, 151, 239, 0.055),
+      transparent 70%
+    );
+}
+
+.industry-number {
+  align-self: start;
+
+  padding-top: 5px;
+
+  color: var(--gold);
+
+  font-size: 10px;
+
+  letter-spacing: 0.16em;
+}
+
+.industry-main h3 {
+  margin: 0 0 9px;
+
+  font-size: 25px;
+
+  font-weight: 500;
+
+  letter-spacing: -0.025em;
+}
+
+.industry-main p {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: var(--text-muted);
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+.industry-arrow {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  border: 1px solid rgba(86, 196, 255, 0.18);
+
+  border-radius: 50%;
+
+  color: var(--blue-bright);
+
+  font-size: 16px;
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.industry-item:hover .industry-arrow {
+  transform: translate(3px, -3px);
+
+  border-color: rgba(86, 196, 255, 0.4);
+
+  background: rgba(86, 196, 255, 0.07);
+}
+
+/* =========================
    INDIA + GCC
 ========================= */
 
 .global-section {
-  padding: 140px 0;
+  padding: 145px 0;
+
   background:
-    radial-gradient(circle at 80% 50%, rgba(15, 100, 180, 0.14), transparent 30%),
+    radial-gradient(
+      circle at 75% 35%,
+      rgba(15, 100, 180, 0.13),
+      transparent 32%
+    ),
     var(--background-soft);
+
   border-top: 1px solid var(--border);
 }
 
-.global-grid {
+.global-header {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+
+  grid-template-columns: 1fr 0.72fr;
+
   gap: 100px;
-  align-items: center;
+
+  align-items: end;
+
+  margin-bottom: 70px;
 }
 
-.global-content {
-  padding-top: 20px;
+.global-header h2 {
+  margin: 0;
+
+  font-size: clamp(46px, 5vw, 70px);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.05em;
 }
 
-.regions {
-  margin-top: 45px;
+.global-header h2 span {
+  color: var(--blue-bright);
+}
+
+.global-intro {
+  max-width: 450px;
+}
+
+.global-intro p {
+  margin: 0;
+
+  color: var(--text-muted);
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+.global-tagline {
+  display: block;
+
+  margin-top: 25px;
+
+  color: var(--gold);
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.25em;
+}
+
+.global-tagline i {
+  margin: 0 8px;
+
+  color: var(--blue-bright);
+
+  font-style: normal;
+}
+
+/* Region cards */
+
+.region-grid {
   display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
   gap: 1px;
+
   background: var(--border);
+
   border: 1px solid var(--border);
 }
 
-.regions div {
+.region-card {
+  position: relative;
+
+  min-height: 390px;
+
+  padding: 32px;
+
+  overflow: hidden;
+
+  background: var(--background);
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.region-card:hover {
+  background: var(--surface);
+
+  transform: translateY(-3px);
+}
+
+.region-card-primary {
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(22, 151, 239, 0.1),
+      transparent 38%
+    ),
+    var(--background);
+}
+
+.region-top {
   display: flex;
+
+  align-items: center;
+
   justify-content: space-between;
-  gap: 20px;
-  padding: 22px;
-  background: var(--background-soft);
 }
 
-.regions strong {
-  font-size: 14px;
+.region-index {
+  color: var(--gold);
+
+  font-size: 10px;
+
+  letter-spacing: 0.16em;
 }
 
-.regions span {
-  color: var(--text-muted);
+.region-status {
+  color: #617185;
+
+  font-size: 8px;
+
+  letter-spacing: 0.17em;
+}
+
+.region-symbol {
+  margin-top: 78px;
+
+  font-size: 38px;
+
+  filter: saturate(0.85);
+}
+
+.region-card h3 {
+  margin: 22px 0 8px;
+
+  font-size: 31px;
+
+  font-weight: 500;
+
+  letter-spacing: -0.035em;
+}
+
+.region-card p {
+  margin: 0;
+
+  color: var(--blue-bright);
+
   font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.04em;
+}
+
+.region-description {
+  display: block;
+
+  max-width: 330px;
+
+  margin-top: 25px;
+
+  color: var(--text-muted);
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+/* GCC country strip */
+
+.gcc-strip {
+  display: flex;
+
+  align-items: center;
+
+  gap: 35px;
+
+  padding: 24px 5px 0;
+
+  color: #647488;
+
+  font-size: 9px;
+
+  letter-spacing: 0.18em;
+}
+
+.gcc-strip > span {
+  color: var(--gold);
+
+  font-weight: 700;
+}
+
+.gcc-countries {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 22px;
+}
+
+.gcc-countries span {
+  color: #77889a;
+
+  font-size: 9px;
+
+  letter-spacing: 0.08em;
 }
 
 /* =========================
@@ -917,6 +1256,243 @@ a {
 }
 
 /* =========================
+   HOW WE WORK
+========================= */
+
+.process-section {
+  position: relative;
+
+  padding: 145px 0;
+
+  background:
+    radial-gradient(
+      circle at 18% 55%,
+      rgba(15, 117, 210, 0.065),
+      transparent 28%
+    ),
+    var(--background);
+
+  border-top: 1px solid var(--border);
+}
+
+.process-header {
+  display: grid;
+
+  grid-template-columns: 1fr 0.72fr;
+
+  gap: 100px;
+
+  align-items: end;
+
+  margin-bottom: 70px;
+}
+
+.process-header h2 {
+  margin: 0;
+
+  font-size: clamp(46px, 5vw, 70px);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.05em;
+}
+
+.process-header h2 span {
+  color: var(--blue-bright);
+}
+
+.process-header > p {
+  max-width: 450px;
+
+  margin: 0;
+
+  color: var(--text-muted);
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+/* Process cards */
+
+.process-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 1px;
+
+  background: var(--border);
+
+  border: 1px solid var(--border);
+}
+
+.process-card {
+  position: relative;
+
+  min-height: 410px;
+
+  padding: 30px;
+
+  background: var(--background);
+
+  overflow: hidden;
+
+  transition:
+    background 0.35s ease,
+    transform 0.35s ease;
+}
+
+.process-card:hover {
+  background: var(--surface);
+
+  transform: translateY(-4px);
+
+  z-index: 2;
+}
+
+.process-card-active {
+  background:
+    radial-gradient(
+      circle at 80% 15%,
+      rgba(22, 151, 239, 0.1),
+      transparent 40%
+    ),
+    var(--background);
+}
+
+.process-card-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.process-number {
+  color: var(--gold);
+
+  font-size: 10px;
+
+  letter-spacing: 0.16em;
+}
+
+.process-arrow {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  border: 1px solid rgba(86, 196, 255, 0.18);
+
+  border-radius: 50%;
+
+  color: var(--blue-bright);
+
+  font-size: 13px;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.process-card:hover .process-arrow {
+  transform: translate(2px, -2px);
+
+  border-color: rgba(86, 196, 255, 0.45);
+
+  background: rgba(86, 196, 255, 0.06);
+}
+
+.process-content {
+  position: absolute;
+
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+}
+
+.process-kicker {
+  display: block;
+
+  margin-bottom: 13px;
+
+  color: #65778a;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+}
+
+.process-card h3 {
+  margin: 0 0 14px;
+
+  font-size: 30px;
+
+  font-weight: 500;
+
+  letter-spacing: -0.035em;
+}
+
+.process-card p {
+  margin: 0;
+
+  color: var(--text-muted);
+
+  font-size: 13px;
+
+  line-height: 1.75;
+}
+
+/* Process footer */
+
+.process-footer {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  margin-top: 28px;
+
+  color: #55677a;
+
+  font-size: 8px;
+
+  letter-spacing: 0.16em;
+}
+
+.process-line {
+  position: relative;
+
+  width: 100px;
+  height: 1px;
+
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.process-line span {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  width: 30%;
+
+  height: 100%;
+
+  background: var(--gold);
+}
+
+/* =========================
    RESPONSIVE
 ========================= */
 
@@ -974,6 +1550,29 @@ a {
     .why-header {
     grid-template-columns: 1fr;
     gap: 30px;
+  }
+
+    .industries-header {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+    .global-header {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .region-grid {
+    grid-template-columns: 1fr;
+  }
+
+    .process-header {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -1126,6 +1725,86 @@ a {
     left: 28px;
     right: 28px;
     bottom: 28px;
+  }
+
+    .industries-section {
+    padding: 90px 0;
+  }
+
+  .industry-item {
+    grid-template-columns: 42px 1fr 40px;
+    gap: 15px;
+    min-height: 135px;
+    padding: 22px 10px;
+  }
+
+  .industry-item:hover {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .industry-main h3 {
+    font-size: 20px;
+  }
+
+  .industry-main p {
+    font-size: 13px;
+  }
+
+  .industry-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+
+    .global-section {
+    padding: 90px 0;
+  }
+
+  .region-card {
+    min-height: 330px;
+    padding: 28px;
+  }
+
+  .region-symbol {
+    margin-top: 55px;
+  }
+
+  .gcc-strip {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .gcc-countries {
+    gap: 14px 20px;
+  }
+
+    .process-section {
+    padding: 90px 0;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-card {
+    min-height: 330px;
+    padding: 28px;
+  }
+
+  .process-content {
+    left: 28px;
+    right: 28px;
+    bottom: 28px;
+  }
+
+  .process-card h3 {
+    font-size: 26px;
+  }
+
+  .process-footer {
+    margin-top: 20px;
   }
 }
 
