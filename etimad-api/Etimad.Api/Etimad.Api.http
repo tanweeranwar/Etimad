@@ -1,0 +1,6 @@
+@Etimad.Api_HostAddress = http://localhost:5062
+
+GET {{Etimad.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

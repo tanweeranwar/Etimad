@@ -1,3 +1,4 @@
+import ContactForm from "./components/ContactForm";
 const services = [
   {
     number: "01",
@@ -38,10 +39,10 @@ export default function Home() {
 
           <nav className="desktop-nav">
             <a href="#services">Services</a>
-            <a href="#solutions">Solutions</a>
+            <a href="#why-etimad">Why Etimad</a>
             <a href="#industries">Industries</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
+            <a href="#global">India + GCC</a>
+            <a href="#how-we-work">How We Work</a>
           </nav>
 
           <a href="#contact" className="nav-cta">
@@ -276,110 +277,6 @@ export default function Home() {
                 </p>
               </div>
             </article>
-          </div>
-        </div>
-      </section>
-
-            {/* How We Work */}
-      <section className="process-section" id="how-we-work">
-        <div className="container">
-          <div className="process-header">
-            <div>
-              <p className="section-label">HOW WE WORK</p>
-
-              <h2>
-                From idea
-                <br />
-                to <span>impact.</span>
-              </h2>
-            </div>
-
-            <p>
-              A clear, collaborative approach that takes your business from
-              challenge to solution — and from solution to long-term value.
-            </p>
-          </div>
-
-          <div className="process-grid">
-            <article className="process-card process-card-active">
-              <div className="process-card-top">
-                <span className="process-number">01</span>
-                <span className="process-arrow">↗</span>
-              </div>
-
-              <div className="process-content">
-                <span className="process-kicker">UNDERSTAND</span>
-
-                <h3>Discover</h3>
-
-                <p>
-                  We start by understanding your business, your users and the
-                  problem you're trying to solve.
-                </p>
-              </div>
-            </article>
-
-            <article className="process-card">
-              <div className="process-card-top">
-                <span className="process-number">02</span>
-                <span className="process-arrow">↗</span>
-              </div>
-
-              <div className="process-content">
-                <span className="process-kicker">DEFINE</span>
-
-                <h3>Design</h3>
-
-                <p>
-                  We translate requirements into a practical architecture,
-                  technology strategy and delivery plan.
-                </p>
-              </div>
-            </article>
-
-            <article className="process-card">
-              <div className="process-card-top">
-                <span className="process-number">03</span>
-                <span className="process-arrow">↗</span>
-              </div>
-
-              <div className="process-content">
-                <span className="process-kicker">ENGINEER</span>
-
-                <h3>Build</h3>
-
-                <p>
-                  We develop, integrate and test the solution with a focus on
-                  quality, security and maintainability.
-                </p>
-              </div>
-            </article>
-
-            <article className="process-card">
-              <div className="process-card-top">
-                <span className="process-number">04</span>
-                <span className="process-arrow">↗</span>
-              </div>
-
-              <div className="process-content">
-                <span className="process-kicker">EVOLVE</span>
-
-                <h3>Scale</h3>
-
-                <p>
-                  We continue to improve, optimize and evolve the technology as
-                  your business and requirements change.
-                </p>
-              </div>
-            </article>
-          </div>
-
-          <div className="process-footer">
-            <span>01</span>
-            <div className="process-line">
-              <span />
-            </div>
-            <span>04</span>
           </div>
         </div>
       </section>
@@ -624,25 +521,179 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="cta-section" id="contact">
-        <div className="container cta-content">
-          <p className="section-label">START A CONVERSATION</p>
+      {/* How We Work */}
+      <section className="process-section" id="how-we-work">
+        <div className="container">
+          <div className="process-header">
+            <div>
+              <p className="section-label">HOW WE WORK</p>
 
-          <h2>
-            Have a challenge?
-            <br />
-            <span>Let&apos;s build the solution.</span>
-          </h2>
+              <h2>
+                From idea
+                <br />
+                to <span>impact.</span>
+              </h2>
+            </div>
 
-          <p>
-            Tell us what you're trying to achieve. We'll explore how
-            technology can help.
-          </p>
+            <p>
+              A clear, collaborative approach that takes your business from
+              challenge to solution — and from solution to long-term value.
+            </p>
+          </div>
 
-          <a href="mailto:hello@etimadsolution.com" className="primary-button">
-            Talk to Etimad <span>↗</span>
-          </a>
+          <div className="process-grid">
+            <article className="process-card process-card-active">
+              <div className="process-card-top">
+                <span className="process-number">01</span>
+                <span className="process-arrow">↗</span>
+              </div>
+
+              <div className="process-content">
+                <span className="process-kicker">UNDERSTAND</span>
+
+                <h3>Discover</h3>
+
+                <p>
+                  We start by understanding your business, your users and the
+                  problem you're trying to solve.
+                </p>
+              </div>
+            </article>
+
+            <article className="process-card">
+              <div className="process-card-top">
+                <span className="process-number">02</span>
+                <span className="process-arrow">↗</span>
+              </div>
+
+              <div className="process-content">
+                <span className="process-kicker">DEFINE</span>
+
+                <h3>Design</h3>
+
+                <p>
+                  We translate requirements into a practical architecture,
+                  technology strategy and delivery plan.
+                </p>
+              </div>
+            </article>
+
+            <article className="process-card">
+              <div className="process-card-top">
+                <span className="process-number">03</span>
+                <span className="process-arrow">↗</span>
+              </div>
+
+              <div className="process-content">
+                <span className="process-kicker">ENGINEER</span>
+
+                <h3>Build</h3>
+
+                <p>
+                  We develop, integrate and test the solution with a focus on
+                  quality, security and maintainability.
+                </p>
+              </div>
+            </article>
+
+            <article className="process-card">
+              <div className="process-card-top">
+                <span className="process-number">04</span>
+                <span className="process-arrow">↗</span>
+              </div>
+
+              <div className="process-content">
+                <span className="process-kicker">EVOLVE</span>
+
+                <h3>Scale</h3>
+
+                <p>
+                  We continue to improve, optimize and evolve the technology as
+                  your business and requirements change.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div className="process-footer">
+            <span>01</span>
+            <div className="process-line">
+              <span />
+            </div>
+            <span>04</span>
+          </div>
+        </div>
+      </section>
+
+            {/* Let's Talk */}
+      <section className="contact-section" id="contact">
+        <div className="container">
+          <div className="contact-header">
+            <div>
+              <p className="section-label">LET&apos;S TALK</p>
+
+              <h2>
+                Have a technology
+                <br />
+                <span>challenge?</span>
+              </h2>
+            </div>
+
+            <div className="contact-intro">
+              <p>
+                Tell us what you&apos;re working on. Whether you need to
+                modernize an existing system, automate a process or build
+                something new, let&apos;s start with a conversation.
+              </p>
+
+              <div className="contact-meta">
+                <span>INDIA</span>
+                <i>•</i>
+                <span>GCC</span>
+                <i>•</i>
+                <span>GLOBAL</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="contact-layout">
+            {/* Left side */}
+            <div className="contact-message">
+              <span className="contact-line" />
+
+              <h3>
+                Let&apos;s build
+                <br />
+                something <span>useful.</span>
+              </h3>
+
+              <p>
+                A technology conversation doesn&apos;t need to start with a
+                specification. Tell us where you&apos;re trying to go and
+                we&apos;ll help you explore the right path.
+              </p>
+
+              <div className="contact-points">
+                <div>
+                  <span>01</span>
+                  <p>Business-first thinking</p>
+                </div>
+
+                <div>
+                  <span>02</span>
+                  <p>Engineering-led solutions</p>
+                </div>
+
+                <div>
+                  <span>03</span>
+                  <p>Built for long-term growth</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Form */}
+            <ContactForm />
+          </div>
         </div>
       </section>
 

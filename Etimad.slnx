@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/etimad-api/">
+    <Project Path="etimad-api/Etimad.Api/Etimad.Api.csproj" />
+    <Project Path="etimad-api/Etimad.Application/Etimad.Application.csproj" />
+    <Project Path="etimad-api/Etimad.Domain/Etimad.Domain.csproj" />
+    <Project Path="etimad-api/Etimad.Infrastructure/Etimad.Infrastructure.csproj" />
+  </Folder>
+</Solution>
