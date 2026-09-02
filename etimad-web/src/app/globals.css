@@ -1598,8 +1598,13 @@ a {
     min-height: 74px;
   }
 
-  .desktop-nav {
-    display: none;
+  .nav-actions {
+    gap: 8px;
+  }
+
+  .mobile-menu summary {
+    width: 40px;
+    height: 40px;
   }
 
   .nav-cta {
@@ -1847,79 +1852,6 @@ a {
 
   .contact-meta {
     flex-wrap: wrap;
-  }
-}
-
-@media (max-width: 600px) {
-  .container {
-    width: min(100% - 32px, 1180px);
-  }
-
-  .nav-container {
-    min-height: 74px;
-  }
-
-  .nav-cta {
-    padding: 11px 15px;
-    font-size: 12px;
-  }
-
-  .brand-name {
-    font-size: 21px;
-  }
-
-  .brand-subtitle {
-    font-size: 6px;
-  }
-
-  .hero-description {
-    font-size: 16px;
-  }
-
-  .hero-trust {
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 35px;
-  }
-
-  .visual-frame {
-    border-radius: 18px;
-  }
-
-  .intro-section,
-  .services-section,
-  .global-section {
-    padding: 90px 0;
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .service-card {
-    min-height: 290px;
-    padding: 28px;
-  }
-
-  .service-card h3 {
-    margin-top: 55px;
-  }
-
-  .regions div {
-    flex-direction: column;
-    gap: 7px;
-  }
-
-  .cta-section {
-    padding: 100px 0;
-  }
-
-  .footer-content {
-    flex-direction: column;
-  }
-
-  .footer-right {
-    text-align: left;
   }
 }
 
@@ -2435,3 +2367,4 @@ a {
 .contact-reset:hover {
   text-decoration: underline;
 }
+

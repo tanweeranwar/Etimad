@@ -45,9 +45,27 @@ export default function Home() {
             <a href="#how-we-work">How We Work</a>
           </nav>
 
-          <a href="#contact" className="nav-cta">
-            Let&apos;s Talk <span>↗</span>
-          </a>
+          <div className="nav-actions">
+            <a href="#contact" className="nav-cta">
+              Let&apos;s Talk <span>↗</span>
+            </a>
+
+            <details className="mobile-menu">
+              <summary aria-label="Open navigation menu">
+                <span />
+                <span />
+                <span />
+              </summary>
+
+              <nav className="mobile-nav">
+                <a href="#services">Services</a>
+                <a href="#why-etimad">Why Etimad</a>
+                <a href="#industries">Industries</a>
+                <a href="#global">India + GCC</a>
+                <a href="#how-we-work">How We Work</a>
+              </nav>
+            </details>
+          </div>
         </div>
       </header>
 
